@@ -14,6 +14,7 @@ public class StringController {
 
     @PostMapping(value = "/strings")
     public String strings(@Valid @RequestBody StringsDTO stringsDTO){
-        return stringsDTO.toString();
+        //return stringsDTO.toString();
+        return stringsDTO.getStringMandatory() + " " + stringsDTO.getStringOptional();
     }
 }
